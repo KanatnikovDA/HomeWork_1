@@ -12,7 +12,7 @@ public class MainClassTest {
     @Test
     public void testGetClassNumber() {
         MainClass mainClass = new MainClass();
-        Assertions.assertTrue(mainClass.getClass_number() >= 45, "Ошибка: getClass_number вернул число меньше 45");
+        Assertions.assertTrue(mainClass.getClass_number() > 45, "Ошибка: getClass_number вернул число меньше либо равное 45");
     }
 
     @Test
