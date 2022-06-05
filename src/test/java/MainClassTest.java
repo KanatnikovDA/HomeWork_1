@@ -10,8 +10,16 @@ public class MainClassTest {
     }
 
     @Test
-    public void  testGetClassNumber(){
+    public void testGetClassNumber() {
         MainClass mainClass = new MainClass();
         Assertions.assertTrue(mainClass.getClass_number() >= 45, "Ошибка: getClass_number вернул число меньше 45");
+    }
+
+    @Test
+    public void testGetClassString() {
+        MainClass mainClass = new MainClass();
+        String expectedString = mainClass.getClass_string();
+        Assertions.assertTrue(expectedString.contains("hello") || expectedString.contains("Hello"),
+                "Строка 'Class_string' не содержит в себе hello'");
     }
 }
